@@ -1,0 +1,45 @@
+/* Navigation Bar */
+nav{
+    width: 100%;
+    padding: 10px 0;
+}
+.nav-contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1004px;
+    margin: 0 auto;
+}
+.nav-contain .logo{
+    width: 130px;
+    height: auto;
+}
+.nav-contain .logo img{
+    width: 100%;
+}
+.navlinkbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navlink{
+    font-family: Libre Baskerville;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 23px;
+}
+.navlink:hover, .active{
+    text-decoration: underline;
+}
+
+/* Making Navigation Bar Responsive */
+
+@media screen and (max-width: 767px){
+    .nav-contain .logo{
+        width: 80px;
+    }
+    .navlink{
+        font-size: 15px;
+    }
+}

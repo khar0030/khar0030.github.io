@@ -1,0 +1,88 @@
+/* Setting Padding and Margin to 0 and Box-Sizing to border-box */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Setting overflow-x to hidden so that horizontal scrollbar dont shos up */
+body{
+    font-family: Merriweather;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* Setting for Basic Tags */
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Contain Class */
+.contain{
+    max-width: 1004px;
+    margin: 0 auto;
+}
+
+/*--------------------------
+MAIN CONTENT OF PAGE STYLING
+---------------------------*/
+
+/* Section which contain paragraph */
+.section-header{
+    padding: 20px 0 0 0;
+    margin-bottom: 42px;
+}
+.section-header .contain p{
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+}
+
+/* Section which contain grid of recent works */
+
+.section-recentwork .contain b{
+    font-size: 20px;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.recentwork-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 18px;
+}
+.recentwork-grid img{
+    width: 100%;
+}
+
+/* ---------------------------
+MAKING MAIN CONTENT RESPONSIVE
+-----------------------------*/
+
+@media screen and (max-width: 953px) {
+    .section-header .contain p{
+        font-size: 19px;
+        line-height: 23px;
+    }
+    .section-recentwork .contain b{
+        font-size: 19px;
+        line-height: 23px;
+    }
+}
+@media screen and (max-width: 767px){
+    .section-header .contain p{
+        font-size: 11px;
+    }
+    .recentwork-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 18px;
+    }
+    .section-recentwork .contain b{
+        display: none;
+    }
+}
